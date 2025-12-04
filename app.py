@@ -41,7 +41,7 @@ pkb = p_key.private_bytes(
 logging.basicConfig(level=logging.DEBUG)
 
 # List all allowed tables in UPPERCASE
-ALLOWED_TABLES = {"ANAVEX_SCI"}
+ALLOWED_TABLES = {"T2D_WIKI"}
 
 def query_snowflake_for_context(query_embedding, table_name, top_k=15):
     # Whitelist check for security (ensure uppercase for case-insensitivity)
