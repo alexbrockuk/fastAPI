@@ -63,7 +63,7 @@ def query_snowflake_for_context(query_embedding, table_name, top_k=15):
     )
     
     # Handle different table structures
-    if table_name == "TABLE_NAME": # Update table name
+    if table_name == "T2D_WIKI": # Update table name
         # Snowflake SQL for slide table
         sql = f"""
         WITH QUERY AS (
