@@ -41,7 +41,7 @@ pkb = p_key.private_bytes(
 logging.basicConfig(level=logging.DEBUG)
 
 # List all allowed tables in UPPERCASE
-ALLOWED_TABLES = {"T2D_WIKI","AI_IMPACT_DATA"}
+ALLOWED_TABLES = {"T2D_WIKI","AI_IMPACT_DATA","MENARINI_RFP"}
 
 def query_snowflake_for_context(query_embedding, table_name, top_k=15):
     # Whitelist check for security (ensure uppercase for case-insensitivity)
@@ -63,7 +63,7 @@ def query_snowflake_for_context(query_embedding, table_name, top_k=15):
     )
     
     # Handle different table structures
-    if table_name in ("T2D_WIKI", "AI_IMPACT_DATA"): # Update table name
+    if table_name in ("T2D_WIKI", "AI_IMPACT_DATA", "MENARINI_RFP"): # Update table name
         # Snowflake SQL for slide table
         sql = f"""
         WITH QUERY AS (
